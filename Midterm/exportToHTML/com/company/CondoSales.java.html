@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>CondoSales.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(98,151,85); font-style: italic; }
+.s3 { color: rgb(106,135,89); }
+.s4 { color: rgb(104,151,187); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+CondoSales.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">import </span><span class="s1">java.text.NumberFormat</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">public class </span><span class="s1">CondoSales { 
+ 
+    </span><span class="s0">public static void </span><span class="s1">main (String [] args) { 
+        </span><span class="s2">/** 
+         *  Write an application for the Summer dale Condo Sales office; the program determines the price 
+         *  of a condominium. Ask the user to choose 1 for park view, 2 for golf course view, or 3 for lake view. 
+         *  The output is the name chosen view as well as the price of the condo. Park view condo. Park view condos are $150.000 
+         *  condos with golf course view are $170.00, and condo with lake view are $210,000. if the user enters an invalid code, set the 
+         *  price to 0. 
+         */</span><span class="s1"> 
+ 
+        NumberFormat nf = NumberFormat.getCurrencyInstance()</span><span class="s0">;</span><span class="s1"> 
+        </span><span class="s0">int </span><span class="s1">view</span><span class="s0">;</span><span class="s1"> 
+        </span><span class="s0">double </span><span class="s1">price</span><span class="s0">;</span><span class="s1"> 
+        Scanner in = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span><span class="s1"> 
+        System.out.println(</span><span class="s3">&quot;Select condos View</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        System.out.print(</span><span class="s3">&quot;1)Park view</span><span class="s0">\n</span><span class="s3">2)Golf course view</span><span class="s0">\n</span><span class="s3">3)Lake view </span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        view = in.nextInt()</span><span class="s0">;</span><span class="s1"> 
+        in.nextLine()</span><span class="s0">;</span><span class="s1"> 
+ 
+ 
+        </span><span class="s0">switch </span><span class="s1">(view) { 
+            </span><span class="s0">case </span><span class="s4">1</span><span class="s1">: 
+                price = </span><span class="s4">150000</span><span class="s0">;</span><span class="s1"> 
+ 
+                System.out.println(</span><span class="s3">&quot;You Have Selected Park View</span><span class="s0">\n</span><span class="s3">Price is &quot; </span><span class="s1">+ nf.format(price))</span><span class="s0">;</span><span class="s1"> 
+                </span><span class="s0">break;</span><span class="s1"> 
+            </span><span class="s0">case </span><span class="s4">2</span><span class="s1">: 
+                price = </span><span class="s4">170000</span><span class="s0">;</span><span class="s1"> 
+                System.out.println(</span><span class="s3">&quot;You Have Selected Golf Course View</span><span class="s0">\n</span><span class="s3">Price is &quot; </span><span class="s1">+ nf.format(price))</span><span class="s0">;</span><span class="s1"> 
+                </span><span class="s0">break;</span><span class="s1"> 
+            </span><span class="s0">case </span><span class="s4">3</span><span class="s1">: 
+                price = </span><span class="s4">210000</span><span class="s0">;</span><span class="s1"> 
+                System.out.println(</span><span class="s3">&quot;You Have Selected Lake View</span><span class="s0">\n</span><span class="s3">Price is &quot; </span><span class="s1">+ nf.format(price))</span><span class="s0">;</span><span class="s1"> 
+                </span><span class="s0">break;</span><span class="s1"> 
+            </span><span class="s0">default</span><span class="s1">: 
+                price = </span><span class="s4">0</span><span class="s0">;</span><span class="s1"> 
+                System.out.println(</span><span class="s3">&quot;Invalid </span><span class="s0">\n</span><span class="s3">price is &quot; </span><span class="s1">+ price)</span><span class="s0">;</span><span class="s1"> 
+ 
+        } 
+ 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>
